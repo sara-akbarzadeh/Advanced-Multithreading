@@ -1,8 +1,12 @@
 package sbu.cs.PrioritySimulator;
-
 public class BlackThread extends ColorThread {
 
     private static final String MESSAGE = "hi blues, hi whites!";
+
+    @Override
+    public void run() {
+        printMessage();
+    }
 
     void printMessage() {
         super.printMessage(new Message(this.getClass().getName(), getMessage()));
@@ -11,10 +15,5 @@ public class BlackThread extends ColorThread {
     @Override
     String getMessage() {
         return MESSAGE;
-    }
-
-    @Override
-    public void run() {
-        // TODO call printMessage
     }
 }
