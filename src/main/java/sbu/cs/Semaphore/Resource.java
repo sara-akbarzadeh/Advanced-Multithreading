@@ -1,7 +1,8 @@
 package sbu.cs.Semaphore;
 
-public class Resource {
+import java.util.concurrent.Semaphore;
 
+public class Resource {
     public static void accessResource() {
         try {
             Thread.sleep(100);
